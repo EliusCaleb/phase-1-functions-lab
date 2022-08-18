@@ -1,11 +1,9 @@
 // Code your solution in this file!
 
-function distanceFromHqInBlocks(number) {
-  if (number===43){
-  return 1;
-}
-else
-return 8;
+function distanceFromHqInBlocks(location) {
+  const hq = 42;
+  const numberOfBlocks = location < 42 ? hq - location : location - hq;
+   return numberOfBlocks;
 }
 console.log (distanceFromHqInBlocks(43));
 console.log(distanceFromHqInBlocks(50));
@@ -13,16 +11,12 @@ console.log(distanceFromHqInBlocks(34));
   
 
 
-  function  distanceFromHqInFeet(number) {
-    if (number===43){
-      return 264;
+  function  distanceFromHqInFeet(location) {
+   const distanceInFeet = 264;
+   const feetNo = distanceFromHqInBlocks(location) * distanceInFeet
+   return feetNo; 
     }
-    else
-    return 2112;
-    }
-    console.log (distanceFromHqInBlocks(43));
-    console.log(distanceFromHqInBlocks(50));
-    console.log(distanceFromHqInBlocks(34));
+    
       
    
 
