@@ -21,15 +21,12 @@ console.log(distanceFromHqInBlocks(34));
    
 
 
-  function   distanceTravelledInFeet(num1,num2){
+  function   distanceTravelledInFeet(start , venue){
+     
+     
+     const destination =  start< venue ?  (venue- start) * 264 : (start-venue) * 264;
 
-    if (num1=== 43 || num2===48 ){
-      return 1320;
-    } else if (num1===50 || num2===60) {
-      return 2640;
-    }
-    else
-    return 1584;
+     return destination;
       
     }
     console.log (distanceTravelledInFeet(43,48));
