@@ -10,30 +10,26 @@ console.log(distanceFromHqInBlocks(50));
 console.log(distanceFromHqInBlocks(34));
   
 
-
-  function  distanceFromHqInFeet(location) {
+//
+function  distanceFromHqInFeet(location) {
    const distanceInFeet = 264;
    const feetNo = distanceFromHqInBlocks(location) * distanceInFeet
    return feetNo; 
-    }
+}
     
-      
-   
 
-
-  function   distanceTravelledInFeet(start , venue){
-     
-     
+function   distanceTravelledInFeet(start , venue){
      const destination =  start< venue ?  (venue- start) * 264 : (start-venue) * 264;
+     return destination;   
+}
+console.log (distanceTravelledInFeet(43,48));
+console.log (distanceTravelledInFeet(50,60));
+console.log (distanceTravelledInFeet(34,28));
 
-     return destination;
-      
-    }
-    console.log (distanceTravelledInFeet(43,48));
-    console.log (distanceTravelledInFeet(50,60));
-    console.log (distanceTravelledInFeet(34,28));
+
     
-    function calculatesFarePrice(start, destination) {
+    
+function calculatesFarePrice(start, destination) {
       let distanceTravelledInFeet = (start - destination) * 264;
       if (start < destination) {
         distanceTravelledInFeet = (destination - start) * 264;
@@ -50,8 +46,8 @@ console.log(distanceFromHqInBlocks(34));
     } else {
       return "cannot travel that far";
     }
-  }
-  console.log(calculatesFarePrice(43, 44));
-  console.log(calculatesFarePrice(34, 32));
-  console.log(calculatesFarePrice(50, 58));
-  console.log(calculatesFarePrice(34, 24));
+}
+console.log(calculatesFarePrice(43, 44));
+console.log(calculatesFarePrice(34, 32));
+console.log(calculatesFarePrice(50, 58));
+console.log(calculatesFarePrice(34, 24));
